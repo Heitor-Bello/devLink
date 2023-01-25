@@ -44,9 +44,9 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /*margin: auto; /*Esse margin está fazendo o preenchimento em cima, baixo, direita e esquerda*/
-
   margin: 56px auto 0px; /*O primeiro aplica em cima(top), segundo nas laterais(left e rigth), terceiro embaixo(bottom)*/
 
   padding: 0 24px;
