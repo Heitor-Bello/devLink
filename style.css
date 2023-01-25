@@ -95,11 +95,16 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
   /*Os comandos acima foram para alinha o elemento (lua)*/
+
+  animation: slide-back 0.2s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards; /* forwards faz com que ele mantenha as propriedades que foram passadas na animação, as propriedade do to(pripriedades finais) */
 }
 
 #switch span {
@@ -192,5 +197,24 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/*===== Animation =====*/
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
